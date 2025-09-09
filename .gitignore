@@ -1,2 +1,6 @@
 .env
 node_modules/
+.production.env
+
+dist/
+build/
