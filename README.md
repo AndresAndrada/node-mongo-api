@@ -1,3 +1,4 @@
+
 # Node Demo API
 
 ![Node.js](https://img.shields.io/badge/Node.js-v20.17.0-green)
@@ -53,7 +54,7 @@ Este proyecto es una API RESTful desarrollada con Node.js y TypeScript, diseñad
     
 -   **Documentación**: API documentada con Swagger (/api-docs).
     
--   **Pruebas Unitarias**: Cobertura de operaciones CRUD con Jest.
+-   **Pruebas Unitarias**: Cobertura de operaciones CRUD con Jest. (PENDIENTE)
     
 -   **Docker**: Incluye Dockerfile para construir y ejecutar la aplicación en un contenedor.
     
@@ -156,12 +157,16 @@ Este proyecto es una API RESTful desarrollada con Node.js y TypeScript, diseñad
     -   Documentación Swagger: http://localhost:3000/api-docs
         
 
-### Ejecutar con Docker  - PENDIENTE
+### Ejecutar con Docker 
 
 1.  **Construir la imagen**: 
     
     ```bash
     docker build -t node-demo-api .
+    ```
+    También puedes ejecutar para corroborar que la imagen se haya creado correctamente: 
+    ```bash
+    docker images
     ```
     
 2.  **Ejecutar el contenedor**: Asegúrate de que MongoDB esté accesible (por ejemplo, corriendo localmente o en una red Docker).
