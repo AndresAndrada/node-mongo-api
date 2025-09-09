@@ -4,10 +4,10 @@ import { authMiddleware } from '../../middlewares/authMiddleware';
 
 const routerUser: Router = Router();
 
-routerUser.get('/', authMiddleware(), getAllUserController);
+routerUser.get('/', authMiddleware("user"), getAllUserController);
 routerUser.get('/:id', authMiddleware("admin"), getUserByIdController);
-routerUser.post('/', authMiddleware(), postUserControllers);
-routerUser.delete('/:id', deleteUserController);
-routerUser.put('/:id', updateUserControllers);
+routerUser.post('/', authMiddleware("admin"), postUserControllers);
+routerUser.delete('/:id', authMiddleware("admin"), deleteUserController);
+routerUser.put('/:id', authMiddleware("admin"), updateUserControllers);
 
 export default routerUser;

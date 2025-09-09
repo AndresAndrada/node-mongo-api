@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "id": "2",
+      "name": "Oscar",
+      "userName": "Lito",
+      "email": "kevin2@gmail.com",
+      "age": 20,
+      "code": 18238,
+      "role": "user"
+    }
+  ]
+}

@@ -1,9 +1,9 @@
 export interface UserType {
   id: string;
-  name: string | null | undefined;
-  userName: string | null | undefined;
-  email: string | null | undefined;
-  age: number | null | undefined;
-  code: number | null | undefined;
-  role?: "admin" | "user" | null;
+  name?: string | null;
+  userName?: string | null;
+  email?: string | null;
+  age?: number | null;
+  code?: number | null;
+  role: 'admin' | 'user';
 }
