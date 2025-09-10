@@ -32,12 +32,13 @@ export const getUserById = async (id: string): Promise<UserType | null> => {
 };
 
 export const createUser = async (user: Omit<UserType, 'id'>): Promise<Record<string, string>> => {
+  console.log("🚀 ~ createUser ~ user:", user)
   try {
     if (user.email && user.email === '') {
       throw new Error('El email no puede estar vacío');
     }
+    var existingUser = await User.findOne({ email: user.email }).exec();
     if (user.email) {
-      const existingUser = await User.findOne({ email: user.email }).exec();
       if (existingUser) {
         throw new Error('El email ya está registrado');
       }

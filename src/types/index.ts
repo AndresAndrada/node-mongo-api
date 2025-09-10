@@ -5,5 +5,6 @@ export interface UserType {
   email?: string | null;
   age?: number | null;
   code?: number | null;
+  image?: string | null | undefined;
   role: 'admin' | 'user';
 }
