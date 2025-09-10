@@ -2,6 +2,7 @@ import { Request, Response, NextFunction } from 'express';
 import { createUser, deleteUser, getAllUsers, getUserById, updateUser } from '../../services/userServices';
 import { UserType } from '../../modules/Users';
 
+// Decidí tener solo un archivo de controller porque me parecio que son pocas funciones.
 export const getAllUserController = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
   try {
     const { search } = req.query;
@@ -21,7 +22,7 @@ export const getUserByIdController = async (req: Request, res: Response, next: N
     }
     const user: UserType | null = await getUserById(id);
     if (!user) {
-      res.status(404).json({ message: 'Usuario no encontrado' });
+      res.status(404).json({ message: 'Usuario no encontrado', user });
       return;
     }
     res.json(user);
