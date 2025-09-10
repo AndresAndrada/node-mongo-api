@@ -87,6 +87,8 @@ export const createMockUser = async (user: Omit<UserType, 'id'>): Promise<Record
       throw new Error('El email ya está registrado');
     }
     const uniquId = users.length + 1;
+    const findId = users.filter(e => e.id === uniquId.toString());
+    if (findId.length > 0) throw new Error ("Id repetido")
     const newUser: UserType = {
       id: uniquId.toString(),
       ...user,

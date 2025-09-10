@@ -1,10 +1,37 @@
 {
   "users": [
     {
+      "id": "1",
+      "name": "Oscar",
+      "userName": "Lito",
+      "email": "kevin30@gmail.com",
+      "age": 20,
+      "code": 18238,
+      "role": "user"
+    },
+    {
       "id": "2",
       "name": "Oscar",
       "userName": "Lito",
-      "email": "kevin2@gmail.com",
+      "email": "nito10@gmail.com",
+      "age": 20,
+      "code": 18238,
+      "role": "user"
+    },
+    {
+      "id": "3",
+      "name": "Oscar",
+      "userName": "Lito",
+      "email": "nito100@gmail.com",
+      "age": 20,
+      "code": 18238,
+      "role": "user"
+    },
+    {
+      "id": "4",
+      "name": "Oscar",
+      "userName": "Lito",
+      "email": "nito1000@gmail.com",
       "age": 20,
       "code": 18238,
       "role": "user"
